@@ -18,7 +18,7 @@ const Login = () => {
             alignItems: 'center',
           }}
         >
-          <div style={{width: '70%'}}>
+          <div style={{width: '70%', color:"#FFFFFF"}}>
             <h1>Kerinci 22</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

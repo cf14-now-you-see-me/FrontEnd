@@ -87,6 +87,21 @@ const Register = () => {
             <div className="main-content-1">
               <div className="main-content-grid-1">
                 <div className="sub-content-grid-30">
+                  <div className="sub-content-grid-90">Nomor HP</div>
+                  <div className="sub-content-grid-10">:</div>
+                </div>
+                <div className="sub-content-grid-70">
+                  <input
+                    className="input-box"
+                    type="text"
+                    placeholder="Nomor HP"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="main-content-1">
+              <div className="main-content-grid-1">
+                <div className="sub-content-grid-30">
                   <div className="sub-content-grid-90">Email</div>
                   <div className="sub-content-grid-10">:</div>
                 </div>

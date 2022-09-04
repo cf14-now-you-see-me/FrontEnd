@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 import './NavbarNew.css';
-import logo from '../assets/LogoNew.png';
+import logokerinci from '../assets/kerinci22.png';
 import burger from '../assets/burger.svg';
 import {useNavigate} from 'react-router-dom';
 
@@ -16,8 +16,8 @@ const Navbar = ({setShow, size}) => {
   return (
     <div className='navbar'>
       <div className='navbar-left'>
-      <img src={logo} />
-        {/* <h2 className='logo'>Kerinci 22</h2> */}
+      <img src={logokerinci} style={{height: '40px'}} alt="" />
+        <h3 className="logo">Kerinci 22</h3>
       </div>
       <div className='navbar-center'>
         <Link className='navbar-text' to="/"> Beranda </Link>

@@ -64,7 +64,9 @@ const Home = () => {
                         </div>
                         <div className='donasi'>
                             <h2 className='donasi-teks'> Ayo Lihat Rekomendasi Tempat Wisata Untukmu!</h2>
+                            <Link to="/rekomendasi">
                             <button className='donasi-btn'>Rekomendasi</button>
+                            </Link>
                         </div>
                     </>
                     )}

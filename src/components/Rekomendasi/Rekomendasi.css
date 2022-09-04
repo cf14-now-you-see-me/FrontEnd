@@ -1,0 +1,63 @@
+.gambar-rekomendasi{
+    height: 20vh;
+    width: 10vw;
+    float:left;
+    padding: 1%;
+}
+
+.rekomendasi-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .rekomendasi-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.info-rekomendasi{
+    margin-right: 10%;
+}
+
+/* .pemesanan{
+    float: right;
+    top:5rem;
+} */
+
+/* .judul-rekomendasi{
+    display:inline-block
+} */
+
+.btn-pesan{
+    float:right;
+    cursor: pointer;
+    background-color: #DC8D3E;
+    color: white;
+    width: 10%;
+    padding: 0.5%;
+}
+
+.input-tgl{
+    background-color: antiquewhite;
+}
+
+.item-rekomendasi{
+    /* background-color: #C5AD6E; */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2%;
+    margin-left:5%;
+    margin-right: 5%;
+    justify-content: center;
+}
+
+.rekomendasi-container{
+    /* background-color: #A4B080; */
+    background-image: url(/src/components/assets/gunungtujuh1.jpg);
+    color:white;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    /* width: 100vw; */
+}

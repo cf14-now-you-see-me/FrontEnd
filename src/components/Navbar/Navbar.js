@@ -19,7 +19,7 @@ function Navbar() {
       </div>
       <div className='navbar-center'>
         <Link className='navbar-text' to="/"> Beranda </Link>
-        <Link className='navbar-text' to="/wisata"> Wisata </Link>
+        <Link className='navbar-text' to="/rekomendasi"> Rekomendasi </Link>
         <Link className='navbar-text' to="/reservasi"> Reservasi </Link>
         <Link className='navbar-text' to="/kontak"> Kontak </Link>
       </div>

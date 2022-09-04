@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import {Route, Routes, Navigate} from 'react-router-dom';
+import Informasi from './components/informasi/Informasi';
+// import Dashboard from './components/dashboard/Dashboard';
+import Wisata from './components/wisata/Wisata';
+import Reservasi from './components/reservasi/Reservasi';
+import Profil from './components/profil/Profil';
+import Search from './components/search/Search';
+import Kontak from './components/kontak/Kontak';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <>
+        {/* <Route path="/" exact element={<Dashboard/>}/> */}
+        <Route path="/" exact element={<Home />} />
+        <Route path="/informasi" exact element={<Informasi />} />
+        <Route path="/wisata" exact element={<Wisata />} />
+        <Route path="/reservasi" exact element={<Reservasi />} />
+        <Route path="/profil" exact element={<Profil />} />
+        <Route path="/search" exact element={<Search />} />
+        <Route path="/kontak" exact element={<Kontak />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/register" exact element={<Register />} />
+      </>
+    </Routes>
   );
 }
 

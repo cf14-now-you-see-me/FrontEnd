@@ -5,6 +5,10 @@
     background: linear-gradient(180deg, rgba(242, 175, 84, 0.7) 71.1%, rgba(0, 0, 0, 0) 100%);
 }
 
+.navbar-left img{
+    width: 120px;
+}
+
 .navbar-left {
     width: 20%;
     height: 70px;

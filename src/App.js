@@ -12,6 +12,8 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register'
 import Rekomendasi from './components/Rekomendasi/Rekomendasi';
+import Booking from './components/Pesan/Booking';
+import ReservasiTotal from './components/Pesan/ReservasiTotal';
 
 function App() {
   return (
@@ -21,13 +23,14 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/informasi" exact element={<Informasi />} />
         <Route path="/wisata" exact element={<Wisata />} />
-        <Route path="/reservasi" exact element={<Reservasi />} />
+        <Route path="/reservasi" exact element={<Booking />} />
         <Route path="/profil" exact element={<Profil />} />
         <Route path="/search" exact element={<Search />} />
         <Route path="/kontak" exact element={<Kontak />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/register" exact element={<Register />} />
         <Route path="/rekomendasi" exact element={<Rekomendasi/>}/>
+        <Route path="/booking" exact element={<ReservasiTotal/>}/>
       </>
     </Routes>
   );

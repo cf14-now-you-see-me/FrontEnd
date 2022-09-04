@@ -14,6 +14,7 @@ import Register from './components/Register/Register'
 import Rekomendasi from './components/Rekomendasi/Rekomendasi';
 import Booking from './components/Pesan/Booking';
 import ReservasiTotal from './components/Pesan/ReservasiTotal';
+import Paket from './components/Paket/Paket';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/register" exact element={<Register />} />
         <Route path="/rekomendasi" exact element={<Rekomendasi/>}/>
         <Route path="/booking" exact element={<ReservasiTotal/>}/>
+        <Route path="/paket" exact element={<Paket/>}/>
       </>
     </Routes>
   );

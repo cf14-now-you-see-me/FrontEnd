@@ -22,7 +22,8 @@ const Navbar = ({setShow, size}) => {
       <div className='navbar-center'>
         <Link className='navbar-text' to="/"> Beranda </Link>
         {/* <Link className='navbar-text' to="/rekomendasi"> Rekomendasi </Link> */}
-        <Link className='navbar-text' to="/reservasi" onClick={() => setShow(true)}> Rekomendasi </Link>
+        <Link className='navbar-text' to="/rekomendasi" onClick={() => setShow(true)}> Rekomendasi </Link>
+        <Link className='navbar-text' to="/paket" onClick={() => setShow(true)}> Paket </Link>
         {/* <Link className='navbar-text' to="/kontak"> Kontak </Link> */}
         {/* <div className='navbar-text' onClick={() => setShow(true)}>Reservasi</div> */}
         {/* <Link to="/booking"> */}

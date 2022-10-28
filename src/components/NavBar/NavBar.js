@@ -6,7 +6,7 @@ const links = [
     ['Rencanakan', '/rencana'],
     ['Rencanamu', '/hasilrencana'],
     ['Rekomendasi', '/rekomendasi'],
-    ['Reservasi', '/reservasi'],
+    // ['Reservasi', '/reservasi'],
 ];
 
 const MainMenu = ()=>{

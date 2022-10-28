@@ -117,6 +117,8 @@ const DetailsPage = () => {
         params: {
           place_id: r.data.google_id,
           key: 'AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A',
+          language: 'id',
+          reviews_no_translations: 'true',
         },
       });
       console.log(p.data.result);

@@ -3,7 +3,7 @@ import ButtonLink from "../../components/Buttons/ButtonLink";
 import PlacesSelection from "../../components/PlacesSelection/PlacesSelection";
 import rencanaPic from './rencanaPage.png';
 import style from './RencanaPage.module.scss';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonAction from "../../components/Buttons/ButtonAction";
 
 const RencanaPage = () => {
@@ -23,6 +23,16 @@ const RencanaPage = () => {
     const handleChange = (e) => {
         localStorage.setItem('rencana__destinasi_1', e.target.value);
         setSelected(e.target.selectedOptions[0].value);
+    }
+    const GetDest1 = () => {
+        let i = localStorage.getItem('rencana__destinasi_1');
+        useEffect(()=>{
+            if (!i) {
+                setSelected("none")
+            }
+            setSelected(i);
+        });
+        return i;
     }
 
     return (
@@ -45,7 +55,7 @@ const RencanaPage = () => {
                         <h3>Destinasi utama</h3>
                         <div className="singleRow">
                             <label for="wisata1">Destinasi 1:</label>
-                            <PlacesSelection selected={localStorage.getItem('rencana__destinasi_1')} onChange={handleChange} id="wisata1"/>
+                            <PlacesSelection selected={GetDest1()} onChange={handleChange} id="wisata1"/>
                         </div>
                         <div className={style.actions}>
                             <ButtonLink to={"/rekomendasi" + (selected=="none"? "" : `?id=${selected}`)}>Lihat rekomendasi</ButtonLink>

@@ -38,7 +38,7 @@ const PlaceDetails = (props) => {
           </header>
           <ul className={styles.status}>
             <li>
-              <b>Buka</b> <br/> {props.response.data.opening_hours.weekday_text[new Date().getDay() - 1]}
+              <b>Buka</b> <br/> {props.response.data.opening_hours?.weekday_text[new Date().getDay() - 1]}
             </li>
             <li>
               <b>Alamat</b> <br/> {props.response.data.formatted_address}

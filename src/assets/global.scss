@@ -1,0 +1,15 @@
+.standardSection {
+    h2 {
+        @apply text-5xl font-extralight tracking-tight leading-tight;
+    }
+    p {
+        @apply my-4 font-medium leading-relaxed;
+    }
+}
+
+.hidden {
+    font-size: 0;
+    position: absolute;
+    top: -999rem;
+    left: -999rem;
+}

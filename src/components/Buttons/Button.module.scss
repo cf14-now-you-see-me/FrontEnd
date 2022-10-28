@@ -1,0 +1,13 @@
+.button {
+    @apply bg-none border-white border-2;
+    @apply px-4 py-2 rounded;
+    @apply inline-block;
+    @apply text-white font-bold;
+    @apply transition-all;
+    @apply hover:bg-white hover:text-black;
+}
+
+.isCta {
+    @apply bg-white text-black;
+    @apply hover:text-slate-400;
+}

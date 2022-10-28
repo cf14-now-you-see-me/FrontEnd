@@ -1,0 +1,13 @@
+.travelCardContainer {
+    @apply grid gap-4 grid-cols-3;
+}
+
+.travelCard {
+    @apply bg-red-400 opacity-100 transition-all duration-500;
+    @apply hover:scale-95;
+    @apply drop-shadow-lg;
+}
+
+.travelCardHidden {
+    @apply opacity-0 translate-x-8;
+}

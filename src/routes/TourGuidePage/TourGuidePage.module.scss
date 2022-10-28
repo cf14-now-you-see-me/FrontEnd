@@ -1,0 +1,123 @@
+// section {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .image-auth {
+//     width: 80%;
+//     max-width: 100%;
+//     margin-top: 38%;
+//     margin-left: 20%;
+// }
+
+// .rencana-right-container{
+//     max-width: 450px;
+//     padding: 24px;
+//     margin-top: 15%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin-left: 20%;
+// }
+
+.rencanaContainer {
+    h2 {
+        @apply text-center;
+        font-family: 'fonarto-regular', sans-serif;
+    }
+    
+    .rencanaRightContainer {
+        background-color: #a4b080;
+        @apply p-4 mt-2;
+        font-family: 'questrial-regular', sans-serif;
+        border: 10px double #c28a4e;
+    }
+    
+    .imageAuth {
+        @apply float-right;
+    }
+    
+    h3 {
+        @apply text-black font-bold;
+        font-family: 'fonarto-regular', sans-serif;
+    }
+    
+    label[for^="wisata"]{
+        @apply pl-4;
+    }
+    
+    .actions {
+        @apply ml-4 mt-2;
+        font-family: 'fonarto-regular', sans-serif;
+    }
+    
+    input {
+        @apply text-black;
+        @apply px-2 py-1 ml-4 rounded;
+    }
+}
+
+.heroContainer {
+    @apply bg-slate-400;
+    @apply -m-4 p-8 mb-8 rounded-xl min-h-full overflow-hidden;
+    @apply flex flex-col justify-center gap-4 relative;
+    @apply drop-shadow-md;
+}
+
+@keyframes bigTitleAnimation {
+    0% {
+        @apply -translate-y-6 opacity-0
+    }
+    100% {
+        @apply translate-x-0 opacity-100
+    }
+}
+.bigTitle {
+    animation: bigTitleAnimation .5s ease-in-out both;
+    animation-fill-mode: both;
+    @apply origin-left;
+    @apply text-7xl tracking-tighter leading-tight;
+    @apply max-w-xl;
+}
+
+.actionList {
+    @apply flex gap-2 flex-wrap;
+    animation: bigTitleAnimation .5s .25s ease-in-out both;
+}
+
+.backgroundsContainer {
+    @apply bg-red-900 absolute left-0 top-0 w-full h-full;
+}
+
+.background {
+    @apply w-full h-full bg-cover absolute left-0 top-0;
+    @apply transition-opacity duration-1000;
+}
+
+.background:after {
+    content: '';
+    @apply block w-full h-full left-0 top-0 absolute opacity-50 bg-black;
+}
+
+.backgroundActive {
+    @apply opacity-100;
+}
+
+.backgroundInactive {
+    @apply opacity-0;
+}
+
+.body {
+    @apply z-20 text-white text-base max-w-xl
+}
+
+.jelajahSection {
+    h2 {
+        @apply text-2xl mb-4;
+    }
+
+    p {
+        @apply mb-4;
+    }
+}

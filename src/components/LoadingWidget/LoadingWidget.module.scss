@@ -1,0 +1,19 @@
+.loading {
+    @apply flex flex-col min-w-full;
+    * {
+        @apply flex-grow;
+    }
+    .element {
+        @apply flex flex-col items-center gap-2;
+        &:before {
+            content: '';
+            @apply block w-10 h-10 rounded-full;
+            @apply bg-gradient-to-r from-green-400 via-green-600;
+            @apply animate-spin;
+        }
+        &:after {
+            content: 'Memuat...';
+            @apply block;
+        }
+    }
+}

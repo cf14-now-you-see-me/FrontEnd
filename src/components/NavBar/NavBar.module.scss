@@ -1,0 +1,29 @@
+.base {
+    @apply bg-orange-300 drop-shadow-lg; 
+    @apply text-black;
+    @apply rounded;
+    @apply p-4 m-4;
+    @apply flex justify-between items-center;
+    @apply flex-col sm:flex-row;
+}
+
+.title:before {
+    content: '';
+    @apply w-8 h-8 inline-block mr-2;
+    background-image: url('./kerinci22-logo.png');
+    background-size: 100%;
+}
+
+.title {
+    @apply text-xl;
+    font-family: 'fonarto-regular', sans-serif;
+    @apply mr-4 flex;
+}
+
+.menu {
+    @apply flex gap-4;
+}
+
+.menuItem {
+    @apply mr-4 hover:bg-orange-200 rounded-md px-2 py-1 transition-colors;
+}

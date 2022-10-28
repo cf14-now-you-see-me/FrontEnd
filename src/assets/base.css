@@ -1,0 +1,21 @@
+@tailwind base;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+body {
+    @apply bg-[#6a783d] max-w-7xl mx-auto text-white;
+}
+
+@font-face {
+    font-family: 'fonarto-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonarto regular'), url(fonts/fonarto.regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'questrial-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('questrial regular'), url(fonts/questrial.regular.ttf) format('truetype');
+}

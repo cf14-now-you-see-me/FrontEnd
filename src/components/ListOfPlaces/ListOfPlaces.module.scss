@@ -1,0 +1,5 @@
+.searchBar {
+    @apply appearance-none min-w-full;
+    @apply mb-4 p-1 rounded px-2 text-black;
+    @apply drop-shadow-md hover:drop-shadow-xl;
+}

@@ -19,7 +19,7 @@ const qc = new QueryClient();
 
 // isi app
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <QueryClientProvider client={qc}>
     <BrowserRouter>
       <NavBar/>
@@ -27,5 +27,5 @@ root.render(
       <Footer/>
     </BrowserRouter>
     </QueryClientProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

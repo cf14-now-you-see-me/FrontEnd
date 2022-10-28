@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useReducer} from 'react';
+import {useEffect, useMemo, useReducer, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 import {useQuery} from 'react-query';
@@ -35,15 +35,15 @@ const PlaceDetails = (props) => {
           </header>
           <ul className={styles.status}>
             <li>
-              <b>Buka</b> {props.response.data.opening_times}
+              <b>Buka</b> <br/> {props.response.data.opening_hours.weekday_text[new Date().getDay() - 1]}
             </li>
             <li>
-              <b>Alamat</b> {props.response.data.location}
+              <b>Alamat</b> <br/> {props.response.data.formatted_address}
             </li>
-            <li>
+            {/* <li>
               <b>Ramah anak</b>{' '}
               {props.response.data.child_friendly ? 'Ya' : 'Tidak'}
-            </li>
+            </li> */}
           </ul>
           <h3 className="hidden">Deskripsi</h3>
           <p className={styles.description}>

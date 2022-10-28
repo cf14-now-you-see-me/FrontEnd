@@ -30,8 +30,7 @@
 
 .status {
     @apply bg-orange-300 rounded-lg px-5 py-2 mt-4 drop-shadow-lg;
-    @apply flex;
-    text-shadow: 0 0 6px black, 0 0 6px black;
+    @apply flex text-black;
 
     li {
         @apply flex-grow;

@@ -1,5 +1,4 @@
 import { TravelCardContainer } from '../TravelCard/TravelCard';
-import Logo from '../../assets/logo.svg';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { useEffect, useState } from 'react';
@@ -26,19 +25,26 @@ const ListOfPlaces = () => {
                 //     }
                 // });
                 // console.log(p.data.result)
-                // const Logo = await axios({
-                //     'url':'/maps-api/place/photo',
-                //     'method': 'get',
-                //     'params': {
-                //         photo_reference: p.data.result.photos.photo_reference,
-                //         key: 'AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A',
-                //     }
-                // });
+                const p = await axios({
+                    url: '/maps-api/place/details/json',
+                    method: 'get',
+                    params: {
+                        place_id: d.google_id,
+                        key: 'AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A',
+                        language: 'id',
+                        reviews_no_translations: 'true',
+                    },
+                });
+                console.info(p.data.result.photos[0].photo_reference);
                 newPlaces.push(
                     {
                         'name': d.name,
                         'url': '/detail?id=' + d.id,
-                        'image': Logo
+                        'image': (
+                            '/maps-api/place/photo?maxwidth=250&photo_reference=' +
+                            p.data.result.photos[0].photo_reference +
+                            '&key=AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A'
+                        )
                     }
                 )
             }

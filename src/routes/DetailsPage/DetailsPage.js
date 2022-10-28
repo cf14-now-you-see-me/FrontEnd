@@ -27,7 +27,9 @@ const PlaceDetails = (props) => {
       <section className="standardSection">
         <div style={{opacity: props.opacity}}>
           <header className={styles.header}>
-            <img src={kayuaro2} />
+            <img src={'/maps-api/place/photo?maxwidth=250&photo_reference=' +
+                    props.response.data.photos[0].photo_reference +
+                    '&key=AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A'} />
             <h2>{props.response.data.name}</h2>
             <Button>Reservasi</Button>
           </header>

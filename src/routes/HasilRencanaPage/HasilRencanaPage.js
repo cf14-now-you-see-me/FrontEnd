@@ -19,7 +19,8 @@ const HasilRencanaPage = () => {
       <div style={{backgroundColor:'#A4B080', padding:'3%', border:'10px double #C28A4E'}}>
         <section>
           <h2>
-            Rencana Liburan dari .... sampai ....
+            Rencana Liburan dari {query.get('start') ? query.get('start') : localStorage.getItem('rencana__tgl_mulai')}
+            sampai {query.get('end') ? query.get('end') : localStorage.getItem('rencana__tgl_selesai')}
           </h2>
          <span> <h2>
             Rekomendasi Lokasi Wisata Untukmu :

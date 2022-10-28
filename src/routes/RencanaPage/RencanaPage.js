@@ -10,6 +10,10 @@ const RencanaPage = () => {
     const [tglMulai, setTglMulai] = useState();
     const [tglSelesai, setTglSelesai] = useState();
     const [budget, setBudget] = useState();
+    const [selected, setSelected] = useState("none");
+    const handleChange = (e) => {
+        setSelected(e.target.selectedOptions[0].value);
+    }
 
     return (
         <main className={style.rencanaContainer} style={{ display:'grid'}}>
@@ -31,14 +35,14 @@ const RencanaPage = () => {
                         <h3>Destinasi utama</h3>
                         <div className="singleRow">
                             <label for="wisata1">Destinasi 1:</label>
-                            <PlacesSelection id="wisata1"/>
+                            <PlacesSelection onChange={handleChange} id="wisata1"/>
                         </div>
                         <div className="singleRow">
                             <label for="wisata2">Destinasi 2:</label>
                             <PlacesSelection id="wisata2"/>
                         </div>
                         <div className={style.actions}>
-                            <ButtonLink to="/rekomendasi" >Lihat rekomendasi</ButtonLink>
+                            <ButtonLink to={"/rekomendasi" + (selected=="none"? "" : `?id=${selected}`)}>Lihat rekomendasi</ButtonLink>
                         </div>
                         <div className="singleRow">
                             <h3>Budget (Rp)</h3>

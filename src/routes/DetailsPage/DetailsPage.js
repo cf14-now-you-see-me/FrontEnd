@@ -31,7 +31,7 @@ const PlaceDetails = (props) => {
                     props.response.data.photos[0].photo_reference +
                     '&key=AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A'} />
             <h2>{props.response.data.name}</h2>
-            <Button>Reservasi</Button>
+            {/* <Button>Reservasi</Button> */}
           </header>
           <ul className={styles.status}>
             <li>

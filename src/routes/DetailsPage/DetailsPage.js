@@ -48,9 +48,10 @@ const PlaceDetails = (props) => {
               {props.response.data.child_friendly ? 'Ya' : 'Tidak'}
             </li> */}
           </ul>
-          <h3 className="hidden">Deskripsi</h3>
+          <br/>
+          <h3 className={styles.sectionHeading}>Deskripsi</h3>
           <p className={styles.description}>
-            {props.response.data.description}
+            {props.desc}
           </p>
           <h3 className={styles.sectionHeading}>Gallery</h3>
           {/* Masukkan gallery di sini... */}
@@ -100,6 +101,8 @@ const PlaceDetails = (props) => {
 };
 
 const DetailsPage = () => {
+  let [desc, setDesc] = useState('');
+
   const query = useUrlQuery();
   const unableToFetch =
     query.get('id') === null || isNaN(Number(query.get('id')));
@@ -115,6 +118,7 @@ const DetailsPage = () => {
         url: '/api/places/' + query.get('id'),
         method: 'get',
       });
+      setDesc(r.data.description);
       console.log(r.data.google_id);
       const p = await axios({
         url: '/maps-api/place/details/json',
@@ -135,7 +139,7 @@ const DetailsPage = () => {
     return <LoadingWidget />;
   }
 
-  return <PlaceDetails response={place} id={query.get('id')} />;
+  return <PlaceDetails response={place} desc={desc} id={query.get('id')} />;
 };
 
 export default DetailsPage;

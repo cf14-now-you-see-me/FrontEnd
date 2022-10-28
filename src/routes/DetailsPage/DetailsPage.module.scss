@@ -42,12 +42,35 @@
     @apply text-2xl font-bold;
 }
 
-.sentimentAnalysis {
-    @apply flex flex-wrap;
+.reviews {
+    @apply pt-4;
+}
 
+.review {
+    background-color: #7e8c57;
+    @apply py-2 px-4 rounded-lg;
+    h3 {
+        @apply font-bold;
+    }
+}
+
+.reviewHeader {
+    background-color: #93a661;
+    @apply py-2 px-4 -mb-4 rounded-lg drop-shadow-lg;
+    @apply flex flex-wrap;
     > * {
         @apply flex-grow;
     }
-    background-color: #A4B080;
-    padding: 2%;
+}
+
+.time {
+    text-align: right;
+}
+
+.rating {
+    text-align: center;
+}
+
+.galleryPhoto {
+    @apply rounded-lg;
 }

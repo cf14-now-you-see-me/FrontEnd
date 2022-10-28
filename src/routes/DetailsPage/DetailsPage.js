@@ -65,6 +65,7 @@ const PlaceDetails = (props) => {
                     item.photo_reference +
                     '&key=AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A'
                   }
+                  className={styles.galleryPhoto}
                   alt="alternatetext"
                 />
               </div>
@@ -72,19 +73,18 @@ const PlaceDetails = (props) => {
           })}
           <h3 className={styles.sectionHeading}>Begini kata orang&hellip;</h3>
           {/* masukkan hasil sentiment analysis disini... */}
-          <div className={styles.sentimentAnalysis}>
+          <div className={styles.reviews}>
             {props.response.data.reviews.map((item, index) => {
               return (
-                <>
+                <div className={styles.review}>
+                  <header className={styles.reviewHeader}>
                   <h3>{item.author_name}</h3>
-                  <p>
-                    Rating: {item.rating}
-                    <br />
-                    {item.relative_time_description}
-                  </p>
+                  <div className={styles.rating}>Rating: {item.rating}</div>
+                  <div className={styles.time}>{item.relative_time_description}</div>
+                  </header>
                   <p>{item.text}</p>
                   <br />
-                </>
+                </div>
               );
             })}
           </div>

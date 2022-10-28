@@ -17,6 +17,23 @@ const ListOfPlaces = () => {
                 'method': 'get'
             });
             for (let d of r.data) {
+                // const p = await axios({
+                //     'url':'/maps-api/place/details/json',
+                //     'method': 'get',
+                //     'params': {
+                //         place_id: d.google_id,
+                //         key: 'AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A',
+                //     }
+                // });
+                // console.log(p.data.result)
+                // const Logo = await axios({
+                //     'url':'/maps-api/place/photo',
+                //     'method': 'get',
+                //     'params': {
+                //         photo_reference: p.data.result.photos.photo_reference,
+                //         key: 'AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A',
+                //     }
+                // });
                 newPlaces.push(
                     {
                         'name': d.name,

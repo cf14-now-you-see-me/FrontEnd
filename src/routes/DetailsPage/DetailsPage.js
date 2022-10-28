@@ -4,6 +4,7 @@ import axios from 'axios';
 import {useQuery} from 'react-query';
 import LoadingWidget from '../../components/LoadingWidget/LoadingWidget';
 import styles from './DetailsPage.module.scss';
+import ButtonLink from '../../components/Buttons/ButtonLink';
 import Button from '../../components/Buttons/Button';
 
 import kayuaro2 from './kayuaro2.jpg';
@@ -31,7 +32,9 @@ const PlaceDetails = (props) => {
                     props.response.data.photos[0].photo_reference +
                     '&key=AIzaSyAO0IzZ74crPA2HG97xZgq6zCEp8kGrj0A'} />
             <h2>{props.response.data.name}</h2>
-            {/* <Button>Reservasi</Button> */}
+            <div className={styles.button}>
+              <ButtonLink to={'/rekomendasi?id=' + props.id }>Rekomendasi dari sini</ButtonLink>
+            </div>
           </header>
           <ul className={styles.status}>
             <li>
@@ -132,7 +135,7 @@ const DetailsPage = () => {
     return <LoadingWidget />;
   }
 
-  return <PlaceDetails response={place} />;
+  return <PlaceDetails response={place} id={query.get('id')} />;
 };
 
 export default DetailsPage;

@@ -11,7 +11,17 @@ const RencanaPage = () => {
     const [tglSelesai, setTglSelesai] = useState();
     const [budget, setBudget] = useState();
     const [selected, setSelected] = useState("none");
+
+    const handleTglMulai = (e) => {
+        localStorage.setItem('rencana__tgl_mulai', e.target.value);
+        setTglMulai(e.target.value);
+    }
+    const handleTglSelesai = (e) => {
+        localStorage.setItem('rencana__tgl_selesai', e.target.value);
+        setTglSelesai(e.target.value);
+    }
     const handleChange = (e) => {
+        localStorage.setItem('rencana__destinasi_1', e.target.value);
         setSelected(e.target.selectedOptions[0].value);
     }
 
@@ -25,21 +35,17 @@ const RencanaPage = () => {
                         <h3>Masukkan jadwal</h3>
                         <div className="singleRow">
                             <label for="startDate">Mulai: </label>
-                            <input type="date" onChange={e=>setTglMulai(e.target.value)} required="1" id="startDate" name="start"></input>
+                            <input type="date" value={localStorage.getItem('rencana__tgl_mulai')} onChange={handleTglMulai} required="1" id="startDate" name="start"></input>
                         </div>
                         <div className="singleRow">
                             <label for="endDate">Selesai: </label>
-                            <input type="date" required="1" onChange={e=>setTglSelesai(e.target.value)}  id="endDate" name="end"></input>
+                            <input type="date" required="1" value={localStorage.getItem('rencana__tgl_selesai')} onChange={handleTglSelesai}  id="endDate" name="end"></input>
                         </div>
                         <br/>
                         <h3>Destinasi utama</h3>
                         <div className="singleRow">
                             <label for="wisata1">Destinasi 1:</label>
-                            <PlacesSelection onChange={handleChange} id="wisata1"/>
-                        </div>
-                        <div className="singleRow">
-                            <label for="wisata2">Destinasi 2:</label>
-                            <PlacesSelection id="wisata2"/>
+                            <PlacesSelection selected={localStorage.getItem('rencana__destinasi_1')} onChange={handleChange} id="wisata1"/>
                         </div>
                         <div className={style.actions}>
                             <ButtonLink to={"/rekomendasi" + (selected=="none"? "" : `?id=${selected}`)}>Lihat rekomendasi</ButtonLink>

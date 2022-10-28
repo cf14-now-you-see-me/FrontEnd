@@ -24,7 +24,7 @@ const PlacesSelection = (props) => {
             {
                 typeof(places.data) == "object" ?
                     places.data.map((place, index) => {
-                        return <option value={place.id} key={place.id}>{place.name}</option>
+                        return <option value={place.id} key={place.id} selected={place.id==props.selected}>{place.name}</option>
                     })
                     : <></>
             }

@@ -1,13 +1,34 @@
+import { useQuery } from 'react-query';
+import axios from 'axios';
+
 /**
  * 
  * @param {{name?: string, onChange?: function, id: string}} props 
  * @returns PlacesSelection
  */
 const PlacesSelection = (props) => {
+    const places = useQuery(
+        [`placesData`],
+        async () => {
+            const r = await axios({
+                'url':'/api/places/',
+                'method': 'get'
+            });
+            return r.data;
+        }
+    );
+
     return (
         <select id={props.id} name={props.id} style={{color: 'black', borderRadius:'5px', padding:'3px', margin:'1%'}} onChange={props.onChange}>
             <option disabled selected>Pilih salah satu tempat wisata...</option>
-            <optgroup label="Danau">
+            {
+                typeof(places.data) == "object" ?
+                    places.data.map((place, index) => {
+                        return <option value={place.id} key={place.id}>{place.name}</option>
+                    })
+                    : <></>
+            }
+            {/* <optgroup label="Danau">
             <option value="danau">Danau Kaco</option>
             <option value="danau">Danau Gunung Tujuh</option>
             <option value="danau">Danau Kerinci</option>
@@ -40,9 +61,8 @@ const PlacesSelection = (props) => {
             <option value="parrot">Waterpark Pancoe7</option>
             </optgroup>
             <optgroup label="Hutan">
-            <option value="parrot">Agroekowisata Hutan Pinus</option>
-            </optgroup>
-            
+            <option value="parrot">Agroekowisata Hutan Pinus</option> 
+            </optgroup> */}
         </select>
     );
 }
